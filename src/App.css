@@ -1,22 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap");
+
+:root {
+  --beige: #f5efe6;
+  --tan: #c9a982;
+  --dark-tan: #8b6848;
+  --brown: #4b382a;
+  --cream: #fffaf3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--beige);
+  color: var(--brown);
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
 .App {
+  min-height: 100vh;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 
 .header {
-  background-color: white;
+  z-index: 10;
+  background-color: rgba(255, 250, 243, 0.95);
+  border-bottom: 1px solid var(--tan);
+  box-shadow: 0 2px 10px rgba(75, 56, 42, 0.08);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -28,37 +47,88 @@
 .header nav {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
-  padding: 1rem 0;
-  font-size: 1.5rem;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+a {
+  color: var(--dark-tan);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--brown);
 }
 
 main {
-  padding-top: 50px;
-  max-width: 700px;
+  padding: 110px 1.5rem 3rem;
+  max-width: 800px;
   margin: 0 auto;
+}
+
+section {
+  scroll-margin-top: 100px;
+  margin-bottom: 4rem;
+}
+
+h2 {
+  color: var(--dark-tan);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: var(--brown);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.35rem;
+  line-height: 1.3;
 }
 
 .profile {
   max-width: 250px;
   height: auto;
+  margin-top: 1rem;
+  border: 6px solid var(--cream);
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(75, 56, 42, 0.2);
 }
 
 .experience-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.experience-item {
+  padding: 1.5rem;
+  background-color: var(--cream);
+  border-left: 5px solid var(--tan);
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 3px 10px rgba(75, 56, 42, 0.08);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.experience-item h3 {
+  margin-top: 0;
+}
+
+.experience-item div {
+  color: var(--dark-tan);
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .header nav {
+    gap: 1rem;
+    font-size: 0.9rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  main {
+    padding-top: 100px;
   }
 }

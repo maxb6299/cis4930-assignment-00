@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <header className="header">
         <nav>
-          <a href="#home">Home</a>
+          <a href="#about">Home</a>
           <a href="#about">About Me</a>
           <a href="#experience">Experience</a>
           <a href="#contact">Contact</a>
@@ -29,6 +29,7 @@ function App() {
           </p>
           <img className="profile" src={profile} alt="Picture of Max" />
         </section>
+        <br />
 
         <section id="experience">
           <h2>Experiences</h2>
@@ -63,15 +64,13 @@ function App() {
               </p>
             </div>
             <div className="experience-item">
-              <h3>Full Stack Team Lead, Remote</h3>
+              <h3>Web Developer, Remote</h3>
               <div>February 2024 - February 2025</div>
-              <p>
-                Led a team of interns in developing a startup's full stack web
-                application in Next.js and Google Firestore.
-              </p>
+              <p>Made a website for a startup company.</p>
             </div>
           </div>
         </section>
+        <br />
 
         <section id="contact">
           <h2>Contact</h2>
@@ -83,6 +82,7 @@ function App() {
             <a href="https://github.com/maxb6299/">GitHub</a>
           </p>
         </section>
+        <br />
       </main>
     </div>
   );
