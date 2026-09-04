@@ -6,6 +6,7 @@ import profile from "./assets/profile.png";
 function App() {
   return (
     <div className="App">
+      <title>Max Boyington | About Me</title>
       <header className="header">
         <nav>
           <a href="#about">Home</a>
